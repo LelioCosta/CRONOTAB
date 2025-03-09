@@ -8,27 +8,7 @@ Então como temos o usuário de root, temos acesso a todas as opções, crontab 
 Vamos verificar se ele está em execução. Está ouvindo na porta 80, na porta 22, ainda não. Agora sim, perceba que ele está ouvindo na porta 55555. Então, mesmo que perdermos essa conexão, podemos nos conectar novamente porque temos um shell de root. Da mesma forma, podemos melhorar esse shell. Nesse caso, não deu certo, teria que fazer um outro processo, talvez com o Python. Mas o interessante nesse caso é que temos uma persistência, que ainda que perdermos a conexão ou por algum motivo, aquele primeiro shell que obtivemos, perdermos essa conexão, conseguimos reestabelecer através desse bind shell.
 
 
-Entendendo o Crontab
-Agendamento de tarefas em Linux
-Henrique Luiz
-TOTVS Developers
-Henrique Luiz
-
-·
-Follow
-
-Published in
-TOTVS Developers
-
-·
-3 min read
-·
-Apr 9, 2020
-81
-
-
-1
-
+Entendendo o Crontab - Agendamento de tarefas em Linux
 
 O Cron é utilizado para agendar tarefas recorrentes, as tarefas são chamadas de cronjobs e são gerenciadas pelo crontab (tabela do cron).
 
